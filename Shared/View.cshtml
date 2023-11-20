@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View</h2>
+<head>
+    <style>
+        #div-header{
+            height:50px;
+            background-color:hotpink;
+            text-align:right;
+            color:red;
+            padding-top:15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div-header">
+        @if (Session["Username"] != null)
+            {
+                <h5>Xin chào: @Session["Username"]</h5>
+            }
+         else
+            {
+                <h5>Bạn chưa đăng nhập</h5>
+            }
+    </div>
+</body>
